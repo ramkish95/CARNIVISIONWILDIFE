@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    # Ensure this matches your Docker port and DB name
+    url: jdbc:postgresql://localhost:5432/wildguard
+    username: postgres
+    password: postgres123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    # Hibernate 6 detects PostGIS automatically; don't specify the old dialect!
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+wildguard:
+  auth:
+    jwt-secret: ${JWT_SECRET:your_super_secret_key_make_it_very_long_for_security_purposes}

@@ -1,0 +1,23 @@
+# Python stuff
+venv/
+__pycache__/
+*.pyc
+*.pt
+.env
+
+# Java/Maven stuff
+target/
+*.class
+.mvn/
+.settings/
+.project
+.classpath
+
+# React/Node stuff
+node_modules/
+dist/
+.eslintcache
+
+# OS stuff
+.DS_Store
+Thumbs.db
